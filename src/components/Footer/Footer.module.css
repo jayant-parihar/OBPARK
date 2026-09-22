@@ -1,0 +1,259 @@
+/* The outer wrapper */
+.footer {
+  width: 100%;
+  padding: 16px; /* Spacing around the whole footer area */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between the gradient box and the disclaimer text */
+  box-sizing: border-box;
+}
+
+/* The main gradient box */
+.footerBox {
+  padding: 60px 8% 30px;
+  border-radius: 22px;
+  background: linear-gradient(150deg, #a5e3cf, #168982);
+  color: white;
+  font-family: "Microgramma Extd D", "Microgramma D Extended", sans-serif;
+}
+
+/* --- REST OF YOUR EXISTING STYLES (Top, Line, Content, etc.) --- */
+/* Make sure to update any @media queries to target .footerBox instead of .footer if needed */
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.logo {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #0b4a47;
+  line-height: 1;
+}
+
+.logo sup {
+  font-size: 16px;
+  font-weight: 400;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.tagline {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b4a47;
+  letter-spacing: 1px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.45);
+  color: #086862;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.socialIcon:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.line {
+  height: 1px;
+  margin: 35px 0;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+.linkColumn h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.linkColumn a {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.linkColumn a:hover {
+  color: #ffffff;
+}
+
+.newsletter h3 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.formContainer {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nameInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formContainer input {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.formContainer input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.formContainer input:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.formContainer button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: #0b4a47;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.formContainer button:hover {
+  background-color: #f0f0f0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 45px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.bottomLinks a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.bottomLinks a:hover {
+  color: #ffffff;
+}
+
+.bottom p {
+  margin: 0;
+}
+
+/* --- NEW DISCLAIMER STYLES --- */
+.disclaimer {
+  /* Typography from Figma */
+  font-family: "Microgramma Extd D", "Microgramma D Extended", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 12px;
+  line-height: 22px; 
+  letter-spacing: 0.07em; /* 7% in CSS translates to 0.07em */
+  color: #000000; /* Pure black as specified */
+  
+  /* Layout styling to place it correctly below the footer box */
+  text-align: center;
+  padding: 0 8%;
+  max-width: 1257px; /* Matching the Figma frame width */
+  margin: 0 auto;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .newsletter {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 850px) {
+  .top {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .newsletter {
+    grid-column: span 1;
+  }
+  
+  .nameInputs {
+    grid-template-columns: 1fr;
+  }
+  
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .disclaimer {
+    text-align: left;
+    padding: 0 16px; /* Add padding on small screens */
+  }
+}

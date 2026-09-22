@@ -1,0 +1,190 @@
+.header {
+  position: absolute;
+  top: 24px; /* Gives it a floating effect from the top */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.navbar {
+  width: 90%;
+  max-width: 800px; /* Wider to fit the links and logo comfortably */
+  height: 56px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 0 24px;
+  box-sizing: border-box;
+  
+  /* Floating pill shape */
+  border-radius: 50px;
+  
+  /* Gradient from the Figma design */
+  background: linear-gradient(
+    90deg, 
+    #71d9c1 0%,
+    #9be5d4 50%,
+    #b0eadc 100%
+  );
+  
+  /* Subtle shadow for the floating effect */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  
+  position: relative;
+}
+
+/* --- LEFT: Navigation Links --- */
+.links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: #1a5e4f; /* Dark green text */
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.links a:hover {
+  opacity: 0.7;
+}
+
+/* --- CENTER: Logo --- */
+.logo {
+  text-decoration: none;
+  color: #0d4036;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.logoImage {
+  display: block;
+  height: 34px;
+  width: auto;
+}
+
+.logo sup {
+  font-size: 10px;
+  margin-top: -4px;
+  margin-left: 2px;
+}
+
+/* --- RIGHT: Actions --- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.getApp {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #1a5e4f;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border: 1px solid #1a5e4f;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.getApp:hover {
+  background-color: #1a5e4f;
+  color: white;
+}
+
+.getApp span {
+  font-size: 10px; /* The dot */
+}
+
+.iconButton {
+  background: transparent;
+  border: 1px solid #1a5e4f;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #1a5e4f;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.iconButton:hover {
+  background-color: #1a5e4f;
+  color: white;
+}
+
+/* --- MOBILE STYLES --- */
+.menuButton {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #1a5e4f;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 5%;
+  width: 90%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 16px;
+  z-index: 99;
+}
+
+.mobileMenu a {
+  text-decoration: none;
+  color: #1a5e4f;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+}
+
+.mobileMenu a:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Hide links/actions on smaller screens, show hamburger */
+@media (max-width: 900px) {
+  .links, .actions {
+    display: none;
+  }
+  
+  .navbar {
+    padding: 0 20px;
+    height: 50px;
+  }
+  
+  .menuButton {
+    display: block;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,491 @@
+/* =========================================================
+   OBPARK - INTRO SECTION
+   Figma Frame: Frame 1561532195
+   ========================================================= */
+
+.section {
+  width: 100%;
+  background: #f0f9f5;
+  padding: 70px 40px 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   TOP CONTENT
+   ========================================================= */
+
+.topContent {
+  width: 100%;
+  max-width: 1280px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 70px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.textContent {
+  width: 100%;
+  max-width: 560px;
+}
+
+.textContent h2 {
+  margin: 0 0 24px;
+
+  color: #2A8B87;
+
+  font-size: 42px;
+  line-height: 0.98;
+  letter-spacing: -1.8px;
+  font-weight: 800;
+
+  max-width: 560px;
+}
+
+.textContent p {
+  margin: 0;
+
+  max-width: 520px;
+
+  color: #4f7773;
+
+  font-size: 14px;
+  line-height: 1.65;
+  font-weight: 400;
+
+  letter-spacing: -0.1px;
+}
+
+/* =========================================================
+   RIGHT CARD
+   Figma:
+   Width  : 726px
+   Height : 594px
+   Radius : 50px
+   ========================================================= */
+
+.card {
+  width: 100%;
+  max-width: 726px;
+  min-height: 594px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 0.5px solid #e5e5e5;
+
+  border-radius: 50px;
+
+  padding: 55px 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow:
+    0 10px 35px rgba(7, 91, 87, 0.08);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   CARD HEADING
+   ========================================================= */
+
+.card h3 {
+  margin: 0 0 35px;
+
+  max-width: 600px;
+
+  color: #158783;
+
+  font-size: 43px;
+  line-height: 0.98;
+  letter-spacing: -1.8px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   CARD LOCATIONS
+   ========================================================= */
+
+.locationsText {
+  margin: 0 0 45px;
+
+  color: #2A8B87;
+
+  font-size: 29px;
+  line-height: 1.45;
+  letter-spacing: -1px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.bookDemo,
+.knowHow {
+  height: 58px;
+
+  padding: 0 38px;
+
+  border: none;
+  border-radius: 30px;
+
+  font-size: 17px;
+  line-height: 1;
+
+  font-weight: 500;
+  letter-spacing: -0.3px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.bookDemo {
+  background: #188e88;
+  color: #ffffff;
+}
+
+.knowHow {
+  background: linear-gradient(
+    90deg,
+    #188e88,
+    #52c9b2
+  );
+
+  color: #ffffff;
+}
+
+.bookDemo:hover,
+.knowHow:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+/* =========================================================
+   FEATURE PILLS
+   ========================================================= */
+
+.pillContainer {
+  width: 100%;
+  max-width: 620px;
+
+  margin-top: 75px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  /* Very small gap because the Figma pills overlap */
+  gap: -1px;
+
+  position: relative;
+}
+
+/* =========================================================
+   INDIVIDUAL PILL
+   ========================================================= */
+
+.pill {
+  width: 100%;
+  height: 72px;
+
+  box-sizing: border-box;
+
+  padding: 0 30px;
+
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  position: relative;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+
+  box-shadow: none;
+
+  transform-origin: center;
+
+  z-index: 1;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.pill:hover {
+  filter: brightness(1.03);
+}
+
+/* =========================================================
+   PILL COLORS
+   ========================================================= */
+
+.pill:nth-child(1) {
+  background: #a9e4d1;
+
+  transform:
+    rotate(-0.5deg)
+    translateY(0);
+
+  z-index: 6;
+}
+
+
+.pill:nth-child(2) {
+  background: #84cbbc;
+
+  transform:
+    rotate(-2deg)
+    translateY(-5px);
+
+  z-index: 5;
+}
+
+.pill:nth-child(3) {
+  background: #64b4a8;
+
+  transform:
+    rotate(2deg)
+    translateY(-10px);
+
+  z-index: 4;
+}
+
+.pill:nth-child(4) {
+  background: #4ba59f;
+
+  transform:
+    rotate(-3deg)
+    translateY(-14px);
+
+  z-index: 3;
+}
+
+.pill:nth-child(5) {
+  background: #319590;
+
+  transform:
+    rotate(1deg)
+    translateY(-18px);
+
+  z-index: 2;
+}
+
+.pill:nth-child(6) {
+  background: #198187;
+
+  transform:
+    rotate(0deg)
+    translateY(-22px);
+
+  z-index: 1;
+}
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.icon {
+  width: 48px;
+  height: 48px;
+
+  min-width: 48px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(226, 249, 241, 0.75);
+
+  color: #147b7b;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .section {
+    padding: 60px 30px 80px;
+  }
+
+  .topContent {
+    gap: 45px;
+  }
+
+  .textContent h2 {
+    font-size: 36px;
+  }
+
+  .card {
+    min-height: 520px;
+    padding: 45px 40px;
+  }
+
+  .card h3 {
+    font-size: 36px;
+  }
+
+  .locationsText {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .section {
+    padding: 55px 20px 70px;
+  }
+
+  .topContent {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .textContent {
+    max-width: 100%;
+  }
+
+  .textContent h2 {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .textContent p {
+    font-size: 14px;
+  }
+
+  .card {
+    max-width: 100%;
+    min-height: auto;
+
+    padding: 45px 30px;
+
+    border-radius: 35px;
+  }
+
+  .card h3 {
+    font-size: 34px;
+  }
+
+  .locationsText {
+    font-size: 23px;
+    line-height: 1.4;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+  }
+
+  .bookDemo,
+  .knowHow {
+    height: 50px;
+    padding: 0 28px;
+    font-size: 14px;
+  }
+
+  .pillContainer {
+    max-width: 100%;
+    margin-top: 55px;
+  }
+
+  .pill {
+    min-height: 52px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+  .section {
+    padding: 45px 16px 60px;
+  }
+
+  .textContent h2 {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 35px 25px;
+    border-radius: 30px;
+  }
+
+  .card h3 {
+    font-size: 29px;
+  }
+
+  .locationsText {
+    font-size: 20px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .bookDemo,
+  .knowHow {
+    height: 46px;
+    padding: 0 22px;
+    font-size: 12px;
+  }
+
+  .pill {
+    min-height: 48px;
+    padding: 0 16px;
+
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+}

@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap');
+/* =========================================
+   ENTERPRISE SECTION
+========================================= */
+
+/* =========================================
+   ENTERPRISE SECTION
+========================================= */
+
+.section {
+  width: 100%;
+  padding: 55px 5% 80px;
+  background: #f0f9f5;
+  color: #064f4f;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.heading p {
+  margin: 0 0 5px;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+
+  color: #2a8b87;
+
+  letter-spacing: 0;
+}
+
+.heading h2 {
+  margin: 0;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+
+  color: #075b5b;
+}
+
+
+/* =========================================
+   PROBLEM / SOLUTION
+========================================= */
+
+.problemGrid {
+  width: 100%;
+  max-width: 1220px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 0;
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.infoCard {
+  min-height: 500px;
+
+  padding: 38px 40px;
+
+  border-radius: 32px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+
+/* =========================================
+   PROBLEM
+========================================= */
+
+.problem {
+  background:
+    linear-gradient(
+      115deg,
+      #198b87 0%,
+      #51b7aa 45%,
+      #a9e5d0 100%
+    );
+
+  color: white;
+
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+/* =========================================
+   SOLUTION
+========================================= */
+
+.solution {
+  background: #ffffff;
+
+  color: #111111;
+
+  border: 1px solid #e5e5e5;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+/* =========================================
+   ENTERPRISE LABEL
+========================================= */
+
+.enterpriseLabel {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  margin-bottom: 38px;
+}
+
+
+/* Toggle */
+
+.toggle {
+  width: 68px;
+  height: 32px;
+
+  background: #ffffff;
+
+  border-radius: 50px;
+
+  padding: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex-shrink: 0;
+}
+
+.toggle span {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+
+  background: #2a8b87;
+
+  display: block;
+}
+
+
+/* Solution toggle */
+
+.solution .toggle {
+  background: #2a8b87;
+
+  justify-content: flex-start;
+}
+
+.solution .toggle span {
+  background: #ffffff;
+}
+
+
+/* =========================================
+   CARD HEADINGS
+========================================= */
+
+.infoCard h3 {
+  margin: 0;
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: clamp(28px, 3vw, 42px);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* Problem */
+
+.problem h3 {
+  color: #ffffff;
+}
+
+
+/* Solution */
+
+.solution h3 {
+  color: #2a8b87;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.infoCard p {
+  margin-top: auto;
+  margin-bottom: 0;
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: clamp(12px, 1.1vw, 15px);
+
+  line-height: 1.65;
+
+  font-weight: 400;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* Problem text */
+
+.problem p {
+  color: #ffffff;
+}
+
+
+/* Solution text */
+
+.solution p {
+  color: #111111;
+}
+
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.solution .benefits {
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   CUSTOMER SECTION
+========================================= */
+
+.customer {
+  max-width: 1100px;
+
+  margin: 75px auto 0;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.7fr;
+
+  gap: 50px;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   CUSTOMER CONTENT
+========================================= */
+
+.content {
+  width: 100%;
+}
+
+.brand {
+  margin: 0 0 6px;
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: 13px;
+
+  color: #2a8b87;
+
+  letter-spacing: 0;
+}
+
+
+.content h3 {
+  margin: 0;
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: clamp(22px, 2.3vw, 32px);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  color: #075b5b;
+}
+
+
+.customerText {
+  margin-top: 16px;
+
+  max-width: 500px;
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: #4c6d6b;
+}
+
+
+/* =========================================
+   QUESTIONS
+========================================= */
+
+.questions {
+  margin-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.question {
+  width: 100%;
+
+  min-height: 38px;
+
+  padding: 8px 14px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 6px;
+
+  border: 1px solid rgba(42, 139, 135, 0.08);
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: 10px;
+
+  color: #315f5d;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.questionToggle {
+  width: 100%;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.answer {
+  overflow: hidden;
+}
+
+.answer p {
+  margin: 6px 0 2px;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1.45;
+  color: #4c6d6b;
+}
+
+.plus {
+  font-size: 16px;
+  display: inline-block;
+  color: #2a8b87;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.image {
+  width: 100%;
+
+  min-height: 350px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #123e3b,
+      #376c63,
+      #7db49e
+    );
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.imagePlaceholder {
+  width: 80%;
+
+  aspect-ratio: 1 / 1;
+
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      #e8f7ef,
+      #8bbba7 35%,
+      #275e55 75%
+    );
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: 25px;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .section {
+    padding: 50px 25px 70px;
+  }
+
+  .problemGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .problem {
+    border-radius: 30px 30px 0 0;
+  }
+
+  .solution {
+    border-radius: 0 0 30px 30px;
+  }
+
+  .customer {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .section {
+    padding: 45px 16px 60px;
+  }
+
+  .heading {
+    margin-bottom: 30px;
+  }
+
+  .heading p {
+    font-size: 11px;
+  }
+
+  .heading h2 {
+    font-size: 24px;
+  }
+
+  .infoCard {
+    min-height: 420px;
+    padding: 28px 24px;
+  }
+
+  .enterpriseLabel {
+    margin-bottom: 28px;
+    font-size: 10px;
+  }
+
+  .toggle {
+    width: 58px;
+    height: 27px;
+  }
+
+  .toggle span {
+    width: 20px;
+    height: 20px;
+  }
+
+  .infoCard h3 {
+    font-size: 28px;
+  }
+
+  .infoCard p {
+    font-size: 11px;
+  }
+
+  .customer {
+    margin-top: 55px;
+  }
+
+}

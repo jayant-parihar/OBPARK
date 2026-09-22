@@ -1,0 +1,134 @@
+.hero {
+  padding: 20px 0 0;
+  background: #f0f9f5;
+}
+
+.heroImage {
+  position: relative;
+  width: calc(100% - 32px);
+  max-width: 1700px;
+  height: 600px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 40, 35, 0.35),
+      rgba(0, 80, 70, 0.08),
+      rgba(0, 30, 25, 0)
+    ),
+    url("/images/hero/hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.heroOverlay {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  padding-left: 8%;
+}
+
+.heroContent {
+  max-width: 560px;
+  color: white;
+}
+
+.smallText {
+  margin-bottom: 18px;
+
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.heroContent h1 {
+  font-size: clamp(42px, 4vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+  font-weight: 800;
+}
+
+.description {
+  max-width: 480px;
+
+  margin-top: 25px;
+
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 13px 23px;
+  border-radius: 30px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.primaryButton {
+  background: #7edbc4;
+  color: #063f3f;
+}
+
+.secondaryButton {
+  border: 1px solid #a9ead9;
+  color: white;
+}
+
+.trustBar {
+  width: calc(100% - 80px);
+  max-width: 1500px;
+
+  margin: 15px auto 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  color: #087c78;
+
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .heroImage {
+    height: 550px;
+  }
+
+  .heroOverlay {
+    padding: 30px;
+  }
+
+  .trustBar {
+    width: calc(100% - 40px);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroImage {
+    height: 500px;
+  }
+
+  .heroContent h1 {
+    font-size: 38px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+}
