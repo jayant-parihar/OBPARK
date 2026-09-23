@@ -1,190 +1,104 @@
-.header {
+/* Navbar.module.css */
+
+.glassNavbar {
   position: absolute;
-  top: 24px; /* Gives it a floating effect from the top */
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  z-index: 100;
-}
-
-.navbar {
-  width: 90%;
-  max-width: 800px; /* Wider to fit the links and logo comfortably */
-  height: 56px;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 64px);
+  max-width: 1200px;
+  height: 64px;
   
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  
+  justify-content: space-between;
   padding: 0 24px;
-  box-sizing: border-box;
   
-  /* Floating pill shape */
-  border-radius: 50px;
+  /* Glassmorphism Effect */
+  background: linear-gradient(105deg, #59D0B5 0%, #CAEDE5 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle white border */
+  border-radius: 999px; /* Pill shape */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08); /* Soft shadow */
   
-  /* Gradient from the Figma design */
-  background: linear-gradient(
-    90deg, 
-    #71d9c1 0%,
-    #9be5d4 50%,
-    #b0eadc 100%
-  );
-  
-  /* Subtle shadow for the floating effect */
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  
-  position: relative;
+  z-index: 10;
+  color: #063f3f; /* Dark teal text */
+  font-family: var(--font-label);
+  font-size: 13px;
+  font-weight: 600;
 }
 
-/* --- LEFT: Navigation Links --- */
-.links {
+.navLinks {
   display: flex;
   gap: 24px;
-  align-items: center;
 }
 
-.links a {
+.navLink {
+  color: inherit;
   text-decoration: none;
-  color: #1a5e4f; /* Dark green text */
-  font-size: 14px;
-  font-weight: 500;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s;
 }
 
-.links a:hover {
+.navLink:hover {
   opacity: 0.7;
 }
 
-/* --- CENTER: Logo --- */
 .logo {
-  text-decoration: none;
-  color: #0d4036;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: flex-start;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #063f3f;
 }
 
-.logoImage {
-  display: block;
-  height: 34px;
-  width: auto;
-}
-
-.logo sup {
-  font-size: 10px;
-  margin-top: -4px;
-  margin-left: 2px;
-}
-
-/* --- RIGHT: Actions --- */
-.actions {
+.navActions {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.getApp {
+.getAppBtn {
   display: flex;
   align-items: center;
   gap: 6px;
-  text-decoration: none;
-  color: #1a5e4f;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 16px;
-  border: 1px solid #1a5e4f;
-  border-radius: 50px;
-  transition: all 0.3s ease;
+  background: #063f3f; /* Dark teal button */
+  border: none;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.getApp:hover {
-  background-color: #1a5e4f;
-  color: white;
+.dot {
+  font-size: 8px;
 }
 
-.getApp span {
-  font-size: 10px; /* The dot */
-}
-
-.iconButton {
+.iconBtn {
   background: transparent;
-  border: 1px solid #1a5e4f;
-  border-radius: 50%;
+  border: 1px solid #063f3f;
+  color: #063f3f;
   width: 32px;
   height: 32px;
+  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
-  color: #1a5e4f;
   font-size: 14px;
-  transition: all 0.3s ease;
 }
 
-.iconButton:hover {
-  background-color: #1a5e4f;
-  color: white;
-}
-
-/* --- MOBILE STYLES --- */
-.menuButton {
-  display: none; /* Hidden on desktop */
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #1a5e4f;
-  cursor: pointer;
-}
-
-.mobileMenu {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 5%;
-  width: 90%;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  box-sizing: border-box;
-  gap: 16px;
-  z-index: 99;
-}
-
-.mobileMenu a {
-  text-decoration: none;
-  color: #1a5e4f;
-  font-size: 16px;
-  font-weight: 500;
-  border-bottom: 1px solid #eaeaea;
-  padding-bottom: 10px;
-}
-
-.mobileMenu a:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-/* Hide links/actions on smaller screens, show hamburger */
+/* Mobile Responsiveness */
 @media (max-width: 900px) {
-  .links, .actions {
-    display: none;
+  .glassNavbar {
+    top: 16px;
+    width: calc(100% - 32px);
+    padding: 0 16px;
+    height: 56px;
   }
   
-  .navbar {
-    padding: 0 20px;
-    height: 50px;
-  }
-  
-  .menuButton {
-    display: block;
-  }
-  
-  .logo {
-    font-size: 20px;
+  .navLinks {
+    display: none; /* Hide links on mobile */
   }
 }

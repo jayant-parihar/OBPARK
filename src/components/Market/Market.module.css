@@ -26,8 +26,9 @@
 
 .heading p {
   margin: 0 0 8px;
+  font-family: var(--font-label);
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 
   color: #2a8b87;
@@ -63,6 +64,8 @@
 
 /* =========================================
    CARD
+   (background-color moved to .cardImage;
+   card itself is now just a frame)
 ========================================= */
 
 .card {
@@ -77,24 +80,38 @@
 
   background-color: #111;
 
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   padding: 25px;
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  will-change: transform;
+
+  transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
   box-shadow:
     0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   BACKGROUND IMAGE LAYER (new)
+   Sits behind everything, zooms on hover
+   independently of the card frame.
+========================================= */
+
+.cardImage {
+  position: absolute;
+  inset: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  will-change: transform;
 }
 
 
@@ -229,24 +246,11 @@
 
 /* =========================================
    CARD BACKGROUNDS
+   (removed — images are now inline via
+   style={{ backgroundImage }} in Market.js
+   on .cardImage, so these classes are no
+   longer needed)
 ========================================= */
-
-/*
-   Keep these image paths according to
-   the images already present in your project.
-*/
-
-.image-0 {
-  background-image: url("/images/hero/car-accessories.png");
-}
-
-.image-1 {
-  background-image: url("/images/hero/enterprise.png");
-}
-
-.image-2 {
-  background-image: url("/images/hero/enterprise.png");
-}
 
 
 /* =========================================

@@ -11,6 +11,7 @@
   margin: 0 auto;
   border-radius: 28px;
   overflow: hidden;
+  will-change: transform;
 
   background:
     linear-gradient(
@@ -24,6 +25,31 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.scanLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 72px;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(126, 219, 196, 0.28),
+    transparent
+  );
+  animation: occupancyScan 4.5s ease-in-out infinite;
+}
+
+@keyframes occupancyScan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(900%);
+  }
 }
 .heroOverlay {
   height: 100%;
@@ -100,7 +126,14 @@
 
   color: #087c78;
 
+  font-family: var(--font-label);
   font-size: 11px;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 @media (max-width: 900px) {
@@ -116,6 +149,13 @@
     width: calc(100% - 40px);
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scanLine {
+    animation: none;
+    display: none;
   }
 }
 

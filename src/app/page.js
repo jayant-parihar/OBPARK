@@ -1,3 +1,4 @@
+import ScrollProgress from "@/components/ScrollProgress";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import IntroSection from "@/components/IntroSection/IntroSection";
@@ -10,6 +11,7 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <div className="site">
+      <ScrollProgress />
       <Navbar />
 
       <main>

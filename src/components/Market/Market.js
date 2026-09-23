@@ -42,16 +42,25 @@ export default function Market() {
       <div className={styles.grid}>
         {products.map((product, index) => (
           <motion.article
-            className={`${styles.card} image-${index}`}
+            className={styles.card}
             key={product.title}
-            style={{ backgroundImage: `url(${product.img})` }}
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewportOnce}
             transition={{ ...easeOut, delay: index * 0.1 }}
-            whileHover={{ y: -8, scale: 1.02 }}
+            whileHover="hover"
             whileTap={{ scale: 0.98 }}
           >
+            {/* background image layer — zooms independently on hover */}
+            <motion.div
+              className={styles.cardImage}
+              style={{ backgroundImage: `url(${product.img})` }}
+              variants={{
+                hover: { scale: 1.08 },
+              }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            />
+
             <div className={styles.topLabel}>{product.title}</div>
             <div className={styles.bottomInfo}>
               <div className={styles.iconCircle}>

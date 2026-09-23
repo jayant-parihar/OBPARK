@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { easeOut, viewportOnce } from "@/lib/motion";
+import { easeOut, hoverGrow, tapShrink, viewportOnce } from "@/lib/motion";
 import styles from "./Resources.module.css";
 
 const resources = [
@@ -76,8 +76,8 @@ export default function Resources() {
 
       <motion.button
         className={styles.viewAllBtn}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.96 }}
+        whileHover={hoverGrow}
+        whileTap={tapShrink}
       >
         View All
       </motion.button>

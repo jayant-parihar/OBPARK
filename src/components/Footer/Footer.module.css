@@ -14,7 +14,7 @@
   border-radius: 22px;
   background: linear-gradient(150deg, #a5e3cf, #168982);
   color: white;
-  font-family: "Microgramma Extd D", "Microgramma D Extended", sans-serif;
+  font-family: inherit;
 }
 
 /* --- REST OF YOUR EXISTING STYLES (Top, Line, Content, etc.) --- */
@@ -33,6 +33,7 @@
 }
 
 .logo {
+  font-family: var(--font-heading);
   font-size: 42px;
   font-weight: 800;
   letter-spacing: -1px;
@@ -48,8 +49,9 @@
 }
 
 .tagline {
-  font-size: 14px;
-  font-weight: 700;
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 400;
   color: #0b4a47;
   letter-spacing: 1px;
 }
@@ -91,8 +93,9 @@
 
 .linkColumn h3 {
   margin-bottom: 15px;
-  font-size: 18px;
-  font-weight: 700;
+  font-family: var(--font-label);
+  font-size: 16px;
+  font-weight: 400;
   color: #ffffff;
 }
 
@@ -202,7 +205,7 @@
 /* --- NEW DISCLAIMER STYLES --- */
 .disclaimer {
   /* Typography from Figma */
-  font-family: "Microgramma Extd D", "Microgramma D Extended", sans-serif;
+  font-family: inherit;
   font-weight: 500; /* Medium */
   font-size: 12px;
   line-height: 22px; 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { easeOut, viewportOnce } from "@/lib/motion";
 import styles from "./Enterprise.module.css";
 
@@ -30,6 +30,7 @@ const questions = [
 
 export default function Enterprise() {
   const [openIndex, setOpenIndex] = useState(null);
+  const reduceMotion = useReducedMotion();
 
   return (
     <section id="about" className={styles.section}>
@@ -47,10 +48,10 @@ export default function Enterprise() {
       <div className={styles.problemGrid}>
         <motion.div
           className={`${styles.infoCard} ${styles.problem}`}
-          initial={{ opacity: 0, x: -48 }}
+          initial={{ opacity: 0, x: -32 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={viewportOnce}
-          transition={easeOut}
+          transition={{ ...easeOut, delay: 0 }}
         >
           <div className={styles.enterpriseLabel}>
             <span className={styles.toggle}>
@@ -71,10 +72,10 @@ export default function Enterprise() {
 
         <motion.div
           className={`${styles.infoCard} ${styles.solution}`}
-          initial={{ opacity: 0, x: 48 }}
+          initial={{ opacity: 0, x: 32 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={viewportOnce}
-          transition={easeOut}
+          transition={{ ...easeOut, delay: 0.12 }}
         >
           <div className={styles.enterpriseLabel}>
             <span className={styles.toggle}>
@@ -140,6 +141,7 @@ export default function Enterprise() {
                     type="button"
                     className={styles.questionToggle}
                     aria-expanded={isOpen}
+                    aria-controls={`enterprise-answer-${index}`}
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                   >
                     <span>{question.title}</span>
@@ -155,6 +157,7 @@ export default function Enterprise() {
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
+                        id={`enterprise-answer-${index}`}
                         className={styles.answer}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
@@ -173,14 +176,24 @@ export default function Enterprise() {
 
         <motion.div
           className={styles.image}
-          initial={{ opacity: 0, scale: 0.92 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={viewportOnce}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <img
+          <motion.img
             src="/images/hero/enterprise.png"
             alt="OBPARK Smart Parking Enterprise Infrastructure"
+            animate={reduceMotion ? undefined : { y: [0, -5, 0] }}
+            transition={
+              reduceMotion
+                ? undefined
+                : {
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }
+            }
           />
         </motion.div>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { easeOut, viewportOnce } from "@/lib/motion";
+import { easeOut, hoverGrow, tapShrink, viewportOnce } from "@/lib/motion";
 import styles from "./FeaturedProduct.module.css";
 
 export default function FeaturedProduct() {
@@ -20,8 +20,8 @@ export default function FeaturedProduct() {
       <div className={styles.product}>
         <motion.div
           className={styles.productImage}
-          initial={{ opacity: 0, scale: 0.92 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, x: -28 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={viewportOnce}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
@@ -34,7 +34,7 @@ export default function FeaturedProduct() {
 
         <motion.div
           className={styles.content}
-          initial={{ opacity: 0, x: 40 }}
+          initial={{ opacity: 0, x: 28 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={viewportOnce}
           transition={{ ...easeOut, delay: 0.2 }}
@@ -48,8 +48,12 @@ export default function FeaturedProduct() {
           </p>
           <motion.button
             className={styles.addButton}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={viewportOnce}
+            transition={{ ...easeOut, delay: 0.35 }}
+            whileHover={hoverGrow}
+            whileTap={tapShrink}
           >
             <svg
               width="18"
