@@ -1,63 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
 @font-face {
-  font-family: "Microgramma D Extended";
+  font-family: "Microgramma";
   src: url("/fonts/MicrogrammaD-MediumExtended.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-* {
+:root {
+  --font-microgramma: "Microgramma", sans-serif;
+  --font-michroma: "Michroma", sans-serif;
+
+  --font-heading: var(--font-microgramma);
+  --font-label: var(--font-michroma);
+}
+
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  /*
+    Force all normal website text to Michroma.
+  */
+  font-family: var(--font-michroma) !important;
 }
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-microgramma) !important;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
 
 html {
   scroll-behavior: smooth;
 }
 
-:root {
-  --font-heading: "Microgramma D Extended", "Microgramma Extd D", var(--font-michroma), sans-serif;
-  --font-label: var(--font-michroma), sans-serif;
-}
-
 body {
-  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+  font-family: var(--font-michroma) !important;
+
   background: #f0f9f5;
   color: #063f3f;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-heading);
-}
+
+/* =========================================
+   BUTTONS / LINKS / FORM ELEMENTS
+========================================= */
 
 button,
 a,
-input {
-  font: inherit;
+input,
+textarea,
+select {
+  font-family: var(--font-michroma) !important;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-button {
-  border: none;
-  cursor: pointer;
-}
+/* =========================================
+   SITE
+========================================= */
 
 .site {
   width: 100%;
   overflow: hidden;
 }
 
+
+/* =========================================
+   SECTIONS
+========================================= */
+
 .section {
   width: min(100% - 80px, 1540px);
   margin: 0 auto;
 }
+
+
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 900px) {
   .section {
@@ -65,11 +108,21 @@ button {
   }
 }
 
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 600px) {
   .section {
     width: min(100% - 24px, 1540px);
   }
 }
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   html {

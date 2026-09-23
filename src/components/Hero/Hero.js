@@ -59,7 +59,7 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         style={{ x, y }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-      >
+      > 
         <span className={styles.scanLine} aria-hidden="true" />
       </motion.div>
 
